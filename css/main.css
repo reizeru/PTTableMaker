@@ -5,18 +5,46 @@
    ========================================================================== */
 
 
+   /* ==========================================================================
+      Author's custom styles
+      ========================================================================== */
+
+   td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}
+
+   @charset "UTF-8";
+   body{
+       background-color:#222;
+   }
+
+   .contents{
+     float: center;
+   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+   .pop_btn > li {
+     display: inline-block;
+     height: 110px;
+     margin: 0;
+     width: 110px;
+   }
+   .pop_btn > li a {
+     background-color: #222;
+     border: 2px solid #888;
+     border-radius: 500px;
+     color: #FF2;
+     display: block;
+     font-size: 18px;
+     height: 100px;
+     line-height: 100px;
+     text-align: center;
+     text-decoration: none;
+     width: 100px;
+   }
+   .pop_btn > li a:hover {
+     background-color: #FF4;
+     color: #222;
+     height: 100px;
+     line-height: 100px;
+     width: 100px;
+     font-size: 18px;
+   }
