@@ -17,9 +17,10 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-
+        <script type="text/javascript" src="js/main.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -43,8 +44,8 @@
       <div class="container">
         <center>ぱ～てぃてーぶるめーかー</center>
         <div style="margin:0px;padding:0px;" align="center">
-          <table width="300px" style="border-collapse: collapse;border:2px double #000000;background-color:#FFFFFF;color:#000000;text-align:left;">
-            <tbody>
+          <table width="300px" id="javascript_sample_table_1" style="border-collapse: collapse;border:2px double #000000;background-color:#FFFFFF;color:#000000;text-align:left;">
+            <thead>
               <tr>
                 <th style="border:2px double #000000;background-color:#FFDEA4;color:#000000;text-align:center;">ポケモン</th>
                 <th style="border:2px double #000000;background-color:#FFDEA4;color:#000000;text-align:center;">特性</th>
@@ -55,76 +56,78 @@
                 <th style="border:2px double #000000;background-color:#FFDEA4;color:#000000;text-align:center;">技4</th>
                 <th style="border:2px double #000000;background-color:#FFDEA4;color:#000000;text-align:center;">備考</th>
               </tr>
+            </thead>
+            <tbody id="javascript_sample_table_1_tbody">
               <tr>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name1" size="10" maxlength="6"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name1" size="10" maxlength="6" id ="name1"></td>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="12" maxlength="10"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
               </tr>
               <tr>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="12" maxlength="10"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
               </tr>
               <tr>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="12" maxlength="10"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
               </tr>
               <tr>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="12" maxlength="10"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
               </tr>
               <tr>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="12" maxlength="10"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
               </tr>
               <tr>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
                 <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="6"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
-                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="30" maxlength="20"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="12" maxlength="10"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
+                <td style="border:2px double #000000;text-align:left;"><input type="text" name="name" size="10" maxlength="8"></td>
               </tr>
             </tbody>
           </table>
-          <div style="width:300px;" align="right">
-            <a href="http://sunafukey.fc2web.com/htmltag/tablelist.html" title="HTML表テンプレート" style="color:#C0C0C0;font-size:50%;text-decoration:none;">HTML表</a>
-          </div>
         </div>
-        <br><br>
-        <br>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">出力&raquo;</a></p>
+        <center>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="koshin()">出力&raquo;</a></p>
+        </center>
+        <center>
+          <textarea NAME="ResultArea" id="txtArea_javascript_sample_table_1"></textarea>
+        </center>
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://reizeru.github.io/PTTableMaker/" data-text="Pokemon PTTableMaker" data-via="rei_zeru250">Tweet</a>
       </div>
     </div>
